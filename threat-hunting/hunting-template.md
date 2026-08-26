@@ -41,7 +41,3 @@ Explain whether the activity is benign lab activity, suspicious, or requires fol
 ## Screenshot Marker
 
 `screenshots/XX-hunt-name.png`
-
-## Redaction
-
-Redact real usernames, SIDs, emails, public IPs, tokens, and unrelated hostnames.

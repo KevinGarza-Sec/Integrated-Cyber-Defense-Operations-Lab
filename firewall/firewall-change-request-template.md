@@ -16,7 +16,3 @@
 | Rollback Plan | Remove or disable rule; restore previous snapshot/config export |
 | Validation Steps | Test connectivity/logs from approved source; verify blocked traffic remains blocked |
 | Evidence Screenshot | screenshots/08-opnsense-firewall-rules-baseline.png or relevant numbered evidence screenshot |
-
-## Interview Explanation
-
-> I documented firewall rule changes using a change-request format so the lab shows governance, not just technical configuration.

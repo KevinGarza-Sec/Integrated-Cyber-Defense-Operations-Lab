@@ -56,5 +56,11 @@
 - [x] Capture management summary screenshot.
 - [x] Update evidence index and screenshot checklist.
 - [x] Add first threat-hunting report.
-- [ ] Optional: create SOC/threat-hunting management summary dashboard.
-- [ ] Optional: final public repo review, sanitized artifact audit, local commit, and push only after approval.
+- [x] Create SOC/threat-hunting management summary Markdown, HTML dashboard, and screenshot.
+- [x] Complete private GitHub push after validation and approval.
+
+## Optional Future Enhancements
+
+- [ ] Enable Suricata IDS/IPS after the firewall baseline is stable.
+- [ ] Add additional Wazuh hunts such as failed logons, local user/group changes, or Nmap scans.
+- [ ] Perform final GitHub web UI review before making the private repository public.

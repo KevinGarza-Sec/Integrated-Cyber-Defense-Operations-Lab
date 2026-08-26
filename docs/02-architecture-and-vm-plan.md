@@ -67,13 +67,3 @@ Exact IPs will be confirmed during build. Do not assume final addresses until ve
 | LAN | Lab systems behind OPNsense | RFC1918 lab subnet |
 | Optional DMZ | Vulnerable target segment | Separate OPNsense interface if resources allow |
 
-## Snapshot Points
-
-Take snapshots/checkpoints:
-
-1. Before installing OPNsense — completed
-2. After basic OPNsense LAN/WAN access works — pending
-3. Before installing Wazuh
-4. After Wazuh dashboard and agent enrollment works
-5. Before vulnerability remediation
-6. After validation scan

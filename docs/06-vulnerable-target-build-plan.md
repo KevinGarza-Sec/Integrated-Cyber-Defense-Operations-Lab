@@ -145,7 +145,3 @@ Interpretation:
 |---|---|
 | `05-target-address-route-dns-baseline.png` | VMware settings for CPU/RAM/disk/network |
 | `07-opnsense-dhcp-leases.png` | Target terminal showing IP/gateway/DNS after install |
-
-## Redaction
-
-Redact local ISO paths, personal usernames, Microsoft/GitHub emails, public IPs, secrets, and tokens. Private lab IPs are acceptable for topology evidence.

@@ -92,7 +92,3 @@ evidence/                     Validation reports and evidence index
 screenshots/                  Screenshot checklist and sanitized proof images
 dashboards/                   Final visual summaries
 ```
-
-## Resume Bullet Draft
-
-> Built an integrated cyber defense operations lab combining OPNsense firewall operations, Greenbone/OpenVAS vulnerability management, and Wazuh/Sysmon threat hunting. Documented firewall policy changes, generated benign endpoint telemetry, mapped detections to MITRE ATT&CK, prioritized vulnerabilities by business risk, tracked remediation, validated risk reduction, and produced evidence-backed analyst documentation.

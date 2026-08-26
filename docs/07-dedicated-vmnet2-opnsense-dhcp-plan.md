@@ -117,7 +117,3 @@ If VMnet2 does not work:
 | `03-vmware-vmnet2-network-editor.png` | VMnet2 subnet with VMware DHCP disabled |
 | `04-opnsense-console-lan-wan-addresses.png` | OPNsense LAN IP/DHCP range |
 | `07-opnsense-dhcp-leases.png` | Target showing DHCP lease/gateway/DNS from OPNsense |
-
-## Redaction
-
-Redact local paths, public IPs, personal account identifiers, tokens, passwords, and secrets. Private lab IPs such as `10.10.10.x` are acceptable because they explain topology.

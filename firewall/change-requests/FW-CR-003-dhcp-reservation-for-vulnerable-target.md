@@ -159,7 +159,3 @@ baseline-opnsense-dashboard-dhcp-rules-logs
 - Private RFC1918 IPs are safe to show.
 - MAC addresses are optional to redact before public GitHub publication.
 - Do not expose OPNsense raw XML configuration backups.
-
-## Interview Explanation
-
-> After creating a firewall rule for one lab host, I converted that host's DHCP lease into a reservation. This prevents address drift from breaking firewall policy, scan targets, and documentation. It shows I understand that reliable security controls depend on stable asset identification, not just one-time rule creation.

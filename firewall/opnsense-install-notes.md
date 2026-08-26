@@ -34,7 +34,3 @@ After reboot:
 ## Evidence Marker
 
 `screenshots/04-opnsense-console-lan-wan-addresses.png` — capture the post-reboot console showing WAN/LAN IP assignments.
-
-## Redaction
-
-Do not capture or publish the root password. Redact public WAN IPs if a bridged/public adapter is ever used. VMware NAT/private RFC1918 IPs are acceptable for lab topology evidence.

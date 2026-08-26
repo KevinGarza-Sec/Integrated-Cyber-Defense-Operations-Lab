@@ -2,7 +2,7 @@
 
 ## Target VM Count
 
-Use **five total VMs** for the best portfolio version:
+Use **five total VMs** for the complete lab design:
 
 | # | VM Name | Role | New or Existing |
 |---:|---|---|---|
@@ -12,7 +12,7 @@ Use **five total VMs** for the best portfolio version:
 | 4 | `Ubuntu` | Kali analyst VM | Existing, despite VMware display name |
 | 5 | `Vuln-Ubuntu-Target` | Vulnerable Linux scan/remediation target | New, strongly recommended |
 
-Minimum practical version is four VMs by skipping the vulnerable Linux VM and running vulnerable services in Docker, but the five-VM layout gives the cleanest portfolio story.
+Minimum practical version is four VMs by skipping the vulnerable Linux VM and running vulnerable services in Docker, but the five-VM layout gives the cleanest technical coverage.
 
 ## Download Links
 

@@ -41,7 +41,7 @@ Why a scanner VM instead of OPNsense or the target:
 - Keeps OPNsense stable as the firewall/router.
 - Keeps the target as the asset being assessed, not the assessment platform.
 - Avoids overloading the future Wazuh/SOC server.
-- Gives clean portfolio evidence: scanner, target, firewall, logs, remediation.
+- Gives clean technical evidence: scanner, target, firewall, logs, remediation.
 
 ## Suggested Greenbone Scanner VM Settings
 
@@ -83,7 +83,7 @@ DNS query google.com: success
 
 Redaction note: the screenshot should redact the MAC-derived IPv6 link-local address before public release.
 
-If resources are tight, use the existing Kali VM for lighter Nmap/manual vulnerability discovery temporarily, but the stronger portfolio version is a dedicated Greenbone scanner VM.
+If resources are tight, use the existing Kali VM for lighter Nmap/manual vulnerability discovery temporarily, but the stronger technical version is a dedicated Greenbone scanner VM.
 
 ## First Greenbone Evidence Set
 
@@ -107,6 +107,5 @@ Continue the vulnerability-management screenshot sequence:
 - Change any default `admin/admin` credentials immediately if Greenbone creates them.
 - Redact credentials, tokens, cookies, scanner IDs, and public IPs.
 
-## Interview Explanation
 
 > I initially evaluated Qualys Community Edition, but the available signup path presented an Enterprise trial requiring a work email rather than a clear no-cost personal Community Edition path. To avoid billing or trial ambiguity, I pivoted to Greenbone/OpenVAS inside my private VMware lab. This kept scanning authorized, internal, and no-cost while still proving vulnerability discovery, prioritization, remediation tracking, and validation.

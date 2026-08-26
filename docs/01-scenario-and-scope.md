@@ -20,7 +20,6 @@ As the security analyst, the objective is to build a defensible workflow that co
 - Greenbone/OpenVAS vulnerability management after an attempted Qualys Community Edition path proved unsuitable for this no-cost private lab workflow
 - Greenbone/OpenVAS fallback for internal scanning if needed
 - Remediation tracker and before/after validation
-- Executive-style reporting and interview-ready documentation
 
 ## Out of Scope
 

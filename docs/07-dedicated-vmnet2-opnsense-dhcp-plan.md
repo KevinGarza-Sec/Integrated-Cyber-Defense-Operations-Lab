@@ -2,7 +2,7 @@
 
 ## Decision
 
-Use the cleaner portfolio design: create a dedicated VMware host-only lab network and let OPNsense own routing, DNS forwarding, and DHCP for lab clients.
+Use the cleaner technical design: create a dedicated VMware host-only lab network and let OPNsense own routing, DNS forwarding, and DHCP for lab clients.
 
 ## Why
 

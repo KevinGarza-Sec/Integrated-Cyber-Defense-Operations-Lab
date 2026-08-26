@@ -172,7 +172,3 @@ After screenshots are captured and before changing rules or enabling IDS/IPS, ta
 OPNsense-Firewall snapshot: baseline-dashboard-dhcp-working
 Vuln-Ubuntu-Target snapshot: baseline-opnsense-dhcp-working
 ```
-
-## Interview Explanation
-
-"After deploying OPNsense, I validated that the firewall had a dedicated LAN and WAN, confirmed that lab clients received DHCP leases from the firewall, verified gateway/DNS/internet connectivity from the protected subnet, and captured a baseline firewall rule state before making policy changes. This gave me a clean starting point for firewall management, vulnerability scanning, and threat-hunting evidence."

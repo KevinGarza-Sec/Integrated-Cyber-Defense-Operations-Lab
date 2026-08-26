@@ -131,19 +131,3 @@ Planned later state:
 | `05-target-address-route-dns-baseline.png` | Vulnerable Linux target VM settings |
 | `07-opnsense-dhcp-leases.png` | Vulnerable target showing DHCP/IP details from the lab LAN |
 | `03-vmware-vmnet2-network-editor.png` | VM list or diagram showing five-VM design |
-
-## Redaction
-
-Redact or crop:
-
-- Local ISO paths like `A:\...` or `B:\...`
-- Personal folder names
-- Public IPs
-- vulnerability scanner account identifiers
-- Tokens, keys, passwords, and API credentials
-
-Safe to show:
-
-- VM names
-- RAM/CPU/disk settings
-- Private lab IPs such as `10.10.10.x` when used for lab topology

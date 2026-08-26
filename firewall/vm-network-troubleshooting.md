@@ -126,7 +126,3 @@ Interpretation:
 - Gateway ping fails: wrong VMnet or firewall/router not reachable.
 - `ping 8.8.8.8` works but `nslookup google.com` fails: DNS problem.
 - Gateway and DNS work but browser fails: proxy/browser/VPN issue.
-
-## Screenshot Redaction
-
-Windows Settings screenshots may show the operator's Microsoft account email. Redact/crop the left profile section before publishing to GitHub.

@@ -92,7 +92,3 @@ Interpretation:
 - OPNsense config backups may contain sensitive material such as hashed passwords, certificates, private keys, VPN material, API keys, or service secrets depending on installed features.
 - Public screenshots may keep RFC1918 lab IPs visible.
 - Public IPs and account identifiers should be redacted.
-
-## Interview Explanation
-
-> Before changing firewall policy, I captured a known-good baseline with dashboard, DHCP, rule, and log evidence. I also created rollback points using VMware snapshots and a private OPNsense config backup. This demonstrates change-control discipline instead of making ad hoc firewall changes.

@@ -1,0 +1,39 @@
+# OS/editor noise
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# Runtime/cache
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.env.*
+
+# Secrets and keys
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.csr
+id_rsa*
+id_ed25519*
+*token*
+*secret*
+*password*
+*credential*
+
+# Unsanitized/raw evidence staging
+unsanitized/
+raw-evidence/
+private-notes/
+
+# Temporary files
+*.tmp
+*.bak
+*.backup

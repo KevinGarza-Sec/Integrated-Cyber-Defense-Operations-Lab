@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Greenbone Vulnerability Management Summary</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { margin: 0; padding: 24px; font-family: Arial, Helvetica, sans-serif; color: #1f2937; background: #f8fafc; }
+  .page { max-width: 1180px; margin: 0 auto; background: white; border: 1px solid #d1d5db; border-radius: 14px; box-shadow: 0 10px 30px rgba(15,23,42,.08); overflow: hidden; }
+  header { padding: 26px 30px; background: linear-gradient(135deg, #0f172a, #14532d); color: white; }
+  h1 { margin: 0 0 8px; font-size: 30px; letter-spacing: .2px; }
+  .subtitle { margin: 0; color: #d1fae5; font-size: 15px; }
+  .content { padding: 28px 30px 32px; }
+  .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 26px; }
+  .kpi { border: 1px solid #d1d5db; border-radius: 12px; padding: 16px; background: #f9fafb; }
+  .kpi .label { color: #6b7280; font-size: 12px; text-transform: uppercase; font-weight: 700; letter-spacing: .08em; }
+  .kpi .value { margin-top: 8px; font-size: 28px; font-weight: 800; }
+  .green { color: #047857; }
+  .amber { color: #b45309; }
+  .blue { color: #1d4ed8; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  section { border: 1px solid #d1d5db; border-radius: 12px; padding: 18px; background: #fff; }
+  h2 { margin: 0 0 12px; font-size: 18px; color: #111827; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th, td { border-bottom: 1px solid #e5e7eb; padding: 9px 8px; text-align: left; vertical-align: top; }
+  th { background: #f3f4f6; font-weight: 700; color: #374151; }
+  .badge { display: inline-block; padding: 3px 8px; border-radius: 999px; font-size: 12px; font-weight: 700; }
+  .medium { background: #fef3c7; color: #92400e; }
+  .closed { background: #dcfce7; color: #166534; }
+  .code { font-family: Consolas, monospace; background: #f3f4f6; padding: 2px 5px; border-radius: 4px; }
+  .flow { margin-top: 20px; padding: 16px; border-radius: 12px; background: #ecfdf5; border: 1px solid #bbf7d0; font-weight: 700; text-align: center; color: #064e3b; }
+  .note { margin-top: 18px; color: #4b5563; line-height: 1.5; }
+</style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <h1>Greenbone Vulnerability Management Summary</h1>
+      <p class="subtitle">Integrated Cyber Defense Operations Lab — authorized single-host scan and remediation validation</p>
+    </header>
+    <div class="content">
+      <div class="kpis">
+        <div class="kpi"><div class="label">Target</div><div class="value blue">10.10.10.167</div></div>
+        <div class="kpi"><div class="label">Initial medium findings</div><div class="value amber">2</div></div>
+        <div class="kpi"><div class="label">Validated medium findings</div><div class="value green">0</div></div>
+        <div class="kpi"><div class="label">Lifecycle status</div><div class="value green">Closed</div></div>
+      </div>
+
+      <div class="grid">
+        <section>
+          <h2>Scope and Method</h2>
+          <table>
+            <tr><th>Scanner</th><td>Greenbone Community Edition / OpenVAS</td></tr>
+            <tr><th>Target name</th><td><span class="code">Vuln-Ubuntu-Target</span></td></tr>
+            <tr><th>Boundary</th><td>Single authorized lab target only; no subnet scan</td></tr>
+            <tr><th>Scan config</th><td><span class="code">Full and fast</span></td></tr>
+          </table>
+        </section>
+        <section>
+          <h2>Validation Result</h2>
+          <table>
+            <tr><th>SSH syntax</th><td>Passed: <span class="code">sshd -t</span></td></tr>
+            <tr><th>Effective ciphers</th><td><span class="code">aes256-gcm@openssh.com,aes128-gcm@openssh.com</span></td></tr>
+            <tr><th>Service health</th><td><span class="code">ssh.service</span> active and port <span class="code">22/tcp</span> listening</td></tr>
+            <tr><th>Greenbone follow-up</th><td>No medium-severity findings visible; remaining results are low/log</td></tr>
+          </table>
+        </section>
+      </div>
+
+      <section style="margin-top:18px">
+        <h2>Medium Findings Tracked</h2>
+        <table>
+          <thead><tr><th>ID</th><th>Finding</th><th>CVSS</th><th>QoD</th><th>Location</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>VM-001</td><td>Prefix Truncation Attacks in SSH Specification — Terrapin Attack</td><td><span class="badge medium">5.9 Medium</span></td><td>30%</td><td>22/tcp</td><td><span class="badge closed">Closed — validated</span></td></tr>
+            <tr><td>VM-002</td><td>OpenSSH Information Disclosure Vulnerability — CVE-2016-20012</td><td><span class="badge medium">5.3 Medium</span></td><td>50%</td><td>22/tcp</td><td><span class="badge closed">Closed — absent in follow-up medium results</span></td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <div class="flow">Scope definition → Baseline scan → Finding triage → Remediation tracker → SSH hardening → Service validation → Follow-up Greenbone validation</div>
+      <p class="note">Professional takeaway: this phase demonstrates vulnerability management as an operational lifecycle, not just scanner execution. The evidence shows controlled scope, safe remediation, service continuity, and validation that medium findings were cleared.</p>
+    </div>
+  </div>
+</body>
+</html>

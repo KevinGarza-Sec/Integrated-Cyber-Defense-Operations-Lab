@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>SOC Threat Hunting Summary</title>
+<style>
+  :root {
+    --bg: #f5f7fb;
+    --card: #ffffff;
+    --text: #111827;
+    --muted: #64748b;
+    --border: #cbd5e1;
+    --blue: #2563eb;
+    --teal: #0f766e;
+    --green: #047857;
+    --amber: #b45309;
+    --red: #b91c1c;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+  .page { max-width: 1180px; margin: 0 auto; padding: 0; background: var(--card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+  .hero { padding: 28px 30px; background: linear-gradient(120deg, #0f172a, #0f766e); color: white; }
+  .hero h1 { margin: 0 0 8px; font-size: 31px; line-height: 1.1; }
+  .hero p { margin: 0; font-size: 16px; color: #e2e8f0; }
+  .content { padding: 28px 30px; }
+  .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 24px; }
+  .kpi { border: 1px solid var(--border); border-radius: 12px; padding: 18px; background: #f8fafc; }
+  .label { text-transform: uppercase; letter-spacing: .08em; color: var(--muted); font-size: 12px; font-weight: 700; margin-bottom: 10px; }
+  .value { font-size: 27px; font-weight: 800; }
+  .blue { color: var(--blue); } .green { color: var(--green); } .teal { color: var(--teal); } .amber { color: var(--amber); }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 18px; }
+  .card { border: 1px solid var(--border); border-radius: 12px; padding: 18px; background: var(--card); }
+  h2 { margin: 0 0 14px; font-size: 19px; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th, td { text-align: left; padding: 10px 9px; border-bottom: 1px solid #e5e7eb; vertical-align: top; }
+  th { background: #f1f5f9; color: #334155; }
+  code { background: #f1f5f9; padding: 2px 6px; border-radius: 5px; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 12px; }
+  .pipeline { margin: 20px 0; border: 1px solid #99f6e4; background: #ecfdf5; color: #064e3b; padding: 16px; border-radius: 12px; font-weight: 800; text-align: center; }
+  .takeaway { color: #334155; font-size: 16px; line-height: 1.45; margin: 14px 0 0; }
+  .badge { display: inline-block; padding: 4px 9px; border-radius: 999px; font-weight: 800; font-size: 12px; }
+  .badge-green { background: #dcfce7; color: #166534; }
+  .badge-blue { background: #dbeafe; color: #1d4ed8; }
+  .badge-amber { background: #fef3c7; color: #92400e; }
+</style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <h1>SOC Threat Hunting Summary</h1>
+      <p>Integrated Cyber Defense Operations Lab — Wazuh/Sysmon endpoint telemetry and PowerShell hunt validation</p>
+    </section>
+    <section class="content">
+      <div class="kpis">
+        <div class="kpi"><div class="label">Endpoint</div><div class="value blue">WIN11</div></div>
+        <div class="kpi"><div class="label">Wazuh Agent</div><div class="value teal">Active</div></div>
+        <div class="kpi"><div class="label">Hunt Hits</div><div class="value amber">57</div></div>
+        <div class="kpi"><div class="label">Analyst Status</div><div class="value green">Triage Complete</div></div>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <h2>Telemetry Scope</h2>
+          <table>
+            <tr><th>Platform</th><td>Wazuh + Sysmon</td></tr>
+            <tr><th>Endpoint</th><td><code>WIN11-ENDPOINT01</code></td></tr>
+            <tr><th>Agent ID</th><td><code>001</code></td></tr>
+            <tr><th>Event source</th><td><code>Microsoft-Windows-Sysmon/Operational</code></td></tr>
+          </table>
+        </div>
+        <div class="card">
+          <h2>Detection Result</h2>
+          <table>
+            <tr><th>Sysmon event</th><td><span class="badge badge-blue">Event ID 1</span> Process Create</td></tr>
+            <tr><th>Wazuh rule</th><td><span class="badge badge-amber">92027</span> PowerShell spawned PowerShell</td></tr>
+            <tr><th>MITRE</th><td><code>T1059.001</code> PowerShell</td></tr>
+            <tr><th>Conclusion</th><td><span class="badge badge-green">Benign lab activity validated</span></td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Evidence Chain</h2>
+        <table>
+          <tr><th>Step</th><th>Evidence</th><th>Purpose</th></tr>
+          <tr><td>1</td><td><code>26-wazuh-services-and-ports.png</code></td><td>Wazuh services and required listeners active</td></tr>
+          <tr><td>2</td><td><code>27-wazuh-dashboard-agent-status.png</code></td><td>Windows endpoint enrolled and active</td></tr>
+          <tr><td>3</td><td><code>28-windows-sysmon-service-and-events.png</code></td><td>Sysmon running with process/file telemetry</td></tr>
+          <tr><td>4</td><td><code>29-benign-powershell-telemetry-generation.png</code></td><td>Controlled PowerShell/file activity generated</td></tr>
+          <tr><td>5</td><td><code>30-wazuh-threat-hunt-powershell-results.png</code></td><td>Wazuh Threat Hunting results found the event</td></tr>
+          <tr><td>6</td><td><code>31-wazuh-powershell-event-details.png</code></td><td>Expanded event fields reviewed for analyst triage</td></tr>
+        </table>
+      </div>
+
+      <div class="pipeline">Endpoint action → Sysmon event → Wazuh ingestion → Threat Hunting query → Event detail review → Analyst conclusion</div>
+      <p class="takeaway"><strong>Professional takeaway:</strong> this phase demonstrates that the lab can produce endpoint telemetry, detect suspicious-looking but authorized behavior, map it to ATT&CK, inspect raw event details, and document a defensible SOC analyst conclusion.</p>
+    </section>
+  </main>
+</body>
+</html>

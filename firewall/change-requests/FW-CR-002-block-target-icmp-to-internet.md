@@ -152,7 +152,3 @@ Interpretation:
 - `8.8.8.8` is a public Google DNS test IP, not KG's public IP.
 - Redact browser profile, personal bookmarks, account identifiers, and any unrelated public IPs if they appear in logs.
 - No passwords or OPNsense config XML should be committed.
-
-## Interview Explanation
-
-> I started with a permissive default LAN baseline, then implemented a narrowly scoped outbound ICMP block for one lab host. I placed the deny rule above the default allow rule, enabled logging, validated that the specific traffic was blocked, and confirmed normal gateway/DNS functionality still worked. This demonstrated change control, rule ordering, least-impact firewall policy, and log-based validation.
